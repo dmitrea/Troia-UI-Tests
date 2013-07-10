@@ -1,4 +1,4 @@
 class Settings():
 
-    webElementTimeOut = 30
+    webElementTimeOut = 60
     url = 'http://devel.project-troia.com'

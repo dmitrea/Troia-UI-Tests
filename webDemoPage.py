@@ -6,6 +6,7 @@ class WebDemoPage(Page):
 
     def __init__(self, driver):
         Page.__init__(self, driver)
+        self.waitUntilElementIsPresent('id', 'id_data_choose')
 
     def setAlgorithm(self, algorithm):
         self.selectListValue('id', 'id_algorithm_choose', algorithm)
