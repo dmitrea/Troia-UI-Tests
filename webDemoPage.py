@@ -17,7 +17,6 @@ class WebDemoPage(Page):
 
     def processData(self):
         self.clickButton('id', 'send_data')
-        self.waitUntilElementIsPresent('id', 'download_zip_btn')
         self.waitUntilDataIsProcessed()
 
     def waitUntilDataIsProcessed(self):
@@ -29,10 +28,6 @@ class WebDemoPage(Page):
                 imgStyleAttribute = spinningImg.get_attribute('style')
                 if imgStyleAttribute == 'display: none;':
                     wait = 0
-                else:
-                    time.sleep(5)
-            else:
-                time.sleep(5)
 
     def getResults_Summary_GAL(self):
         res = {}
