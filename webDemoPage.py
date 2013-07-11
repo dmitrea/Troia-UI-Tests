@@ -71,7 +71,6 @@ class WebDemoPage(Page):
     def getResultsUrl(self):
         self.clickButton('xpath', "id('resultsTab')/li[1]/a")
         url = self.findElement('xpath', "id('url')/pre").text
-        print url
         return url
 
     def downloadResults(self):
